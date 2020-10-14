@@ -1,0 +1,5 @@
+.vscode
+migrations
+types
+node_modules/
+build/

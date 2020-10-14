@@ -1,0 +1,57 @@
+{
+  "name": "@leovigna/defi-contracts",
+  "description": "Common DeFi contract deployment monorepo",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leovigna/defi-contracts"
+  },
+  "keywords": [
+    "defi",
+    "uniswap",
+    "ethereum"
+  ],
+  "files": [
+    "contracts",
+    "build"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "@typechain/truffle-v5": "^2.0.0",
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^2.4.1",
+    "ethereumjs-util": "^6.2.0",
+    "mocha": "^6.2.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "solc": "0.5.16",
+    "truffle": "^5.1.22",
+    "ts-node": "^8.5.4",
+    "typechain": "2.0.0",
+    "typescript": "^3.7.3",
+    "web3": "^1.3.0",
+    "web3-eth-contract": "^1.3.0"
+  },
+  "scripts": {
+    "lint": "yarn prettier ./test/*.ts --check",
+    "lint:fix": "yarn prettier ./test/*.ts --write",
+    "clean": "rimraf ./build/",
+    "precompile": "yarn clean",
+    "compile": "waffle .waffle.json",
+    "pretest": "yarn compile",
+    "test": "mocha",
+    "prepublishOnly": "yarn test",
+    "generate-types": "typechain --target=truffle-v5 'build/contracts/*.json'",
+    "postinstall": "truffle compile && yarn generate-types",
+    "migrate": "tsc -p ./tsconfig.migrate.json --outDir ./migrations && truffle migrate",
+    "typecheck": "tsc --noEmit -p ./tsconfig.migrate.json"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.2.0"
+  }
+}
