@@ -1,4 +1,4 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.5.0;
 
 // this contract serves as feeToSetter, allowing owner to manage fees in the context of a specific feeTo implementation
 contract FeeToSetter {

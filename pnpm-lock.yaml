@@ -1,6 +1,5 @@
-dependencies:
-  '@openzeppelin/contracts': 3.2.0
 devDependencies:
+  '@openzeppelin/contracts': 2.5.1
   '@typechain/truffle-v5': 2.0.2_truffle@5.1.48+typechain@2.0.0
   '@types/chai': 4.2.13
   '@types/mocha': 5.2.7
@@ -169,10 +168,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-htsFhOD+NMBxx676A8ehSuwVV49iqpSB+CkjPZ02tpNew0K6p8g0CZ46Z1ZP946gIHAU80xQ0NACHYrjIUaCFA==
-  /@openzeppelin/contracts/3.2.0:
-    dev: false
+  /@openzeppelin/contracts/2.5.1:
+    dev: true
     resolution:
-      integrity: sha512-bUOmkSoPkjnUyMiKo6RYnb0VHBk5D9KKDAgNLzF41aqAM3TeE0yGdFF5dVRcV60pZdJLlyFT/jjXIZCWyyEzAQ==
+      integrity: sha512-qIy6tLx8rtybEsIOAlrM4J/85s2q2nPkDqj/Rx46VakBZ0LwtFhXIVub96LXHczQX0vaqmAueDqNPXtbSXSaYQ==
   /@resolver-engine/core/0.3.3:
     dependencies:
       debug: 3.2.6
@@ -6853,7 +6852,7 @@ packages:
       tarball: 'https://codeload.github.com/ethereumjs/ethereumjs-abi/tar.gz/1ce6a1d64235fabe2aaf827fd606def55693508f'
     version: 0.6.8
 specifiers:
-  '@openzeppelin/contracts': ^3.2.0
+  '@openzeppelin/contracts': ^2.5.1
   '@typechain/truffle-v5': ^2.0.0
   '@types/chai': ^4.2.6
   '@types/mocha': ^5.2.7

@@ -1,4 +1,4 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.5.0;
 
 import './SafeMath.sol';
 
@@ -51,7 +51,7 @@ contract Timelock {
         delay = delay_;
     }
 
-    receive() external payable {}
+    function() external payable {}
 
     function setDelay(uint256 delay_) public {
         require(msg.sender == address(this), 'Timelock::setDelay: Call must come from Timelock.');

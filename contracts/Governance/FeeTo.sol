@@ -1,4 +1,4 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.5.0;
 
 // this contract gives owner the ability to allow tokens. for pairs in which both tokens are allowed, fees may be
 // collected on that pair and send to feeRecipient, though only after burning all fees up to that point
